@@ -97,7 +97,13 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "date": "2019-05-12",
+      "description": "",
+      "category": "",
+      "amount": "",
+      "id": 15
     }
   ]
- }
- 
+}
