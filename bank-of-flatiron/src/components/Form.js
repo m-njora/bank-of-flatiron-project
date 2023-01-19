@@ -7,7 +7,7 @@ function AddTransactionForm() {
   const [category, setCategory] = useState("")
   const [amount, setAmount] = useState("")
   function handleSubmit(e) {
-    fetch("http://localhost:3000/transactions", {
+    fetch("https://api.npoint.io/fb58ad61f63ea6ba4d8b", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -22,7 +22,7 @@ function AddTransactionForm() {
      alert("added successfully")
   }
   return (
-    <div className="ui segment">
+    <div className="segment">
       <form onSubmit={handleSubmit} className="ui form">
         <div className="inline fields">
           <input value={date} onChange={(e) => setDate(e.target.value)} type="date" name="date" />
@@ -30,7 +30,7 @@ function AddTransactionForm() {
           <input value={category} onChange={(e) => setCategory(e.target.value)} type="text" name="category" placeholder="Category" />
           <input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" name="amount" placeholder="Amount" step="0.01" />
         </div>
-        <button className="ui button" type="submit">
+        <button className=" button" type="submit">
           Add Transaction
         </button>
       </form>
